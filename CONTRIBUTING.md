@@ -10,7 +10,7 @@ The contributor role is the starting role for anyone participating in the projec
 
 ### Process for becoming a contributor
 
-* Review the [coding standards](https://docs.openmoonray.org/developer-guide/coding-standards/) to ensure your contribution is in line with the project's coding and styling guidelines.
+* Review the [coding standards](https://docs.openmoonray.org/developer-reference/coding-standards/) to ensure your contribution is in line with the project's coding and styling guidelines.
 * Have a signed CLA on file ( see [below](#contributor-license-agreements) )
 * Have your submission approved by the [committer(s)](#committer) and merged into the codebase.
 
@@ -22,8 +22,9 @@ license.
 
 #### Contributor License Agreements
 
-Developers who wish to contribute code to be considered for inclusion
-in MoonRay must first complete a **Contributor License Agreement**.
+Developers who wish to contribute code to be considered for inclusion in MoonRay must first complete
+a **Contributor License Agreement**, and email it to MoonRay@dreamworks.com and be sure to include
+your GitHub username(s).
 
 * If you are an individual writing the code on your own time and
   you're SURE you are the sole owner of any intellectual property you

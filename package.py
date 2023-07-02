@@ -11,7 +11,7 @@ def version():
     """
     Increment the build in the version.
     """
-    _version = '0.1'
+    _version = '1.2.0.0'
     from rezbuild import earlybind
     return earlybind.version(this, _version)
 
@@ -63,11 +63,18 @@ requires = [
 
 private_build_requires = [
     'cmake',
-    'cmake_modules',
     'cppunit-1.15.1.x',
     'ispc-1.14.1.x',
     'python-2.7|3.7|3.9'
 ]
+
+# Create dictionary of tests for the rez-test command
+commandstr = lambda i: "cd build/"+os.path.join(*variants[i])+"; ctest -j $(nproc) -L 'unit'"
+testentry = lambda i: ("variant%d" % i,
+                       { "command": commandstr(i),
+                         "requires": ["cmake-3.23"] + variants[i] } )
+testlist = [testentry(i) for i in range(len(variants))]
+tests = dict(testlist)
 
 def commands():
     prependenv('ARRAS_SESSION_PATH', '{root}/sessions')
